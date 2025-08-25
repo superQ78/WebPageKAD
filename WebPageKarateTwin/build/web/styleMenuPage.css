@@ -1,0 +1,302 @@
+/* ======================================= */
+/* Estilos Generales y de Contenedor Principal */
+/* ======================================= */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background-color: #333333; /* Gris oscuro para el fondo principal */
+    color: #FFFFFF;
+}
+
+.main-container {
+    display: flex; /* Utiliza Flexbox para el layout */
+    min-height: 100vh;
+}
+
+/* ======================================= */
+/* Estilos del Menú Lateral (Sidebar) */
+/* ======================================= */
+.sidebar {
+    width: 250px;
+    background-color: #000000;
+    color: #FFFFFF;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.logo {
+    font-size: 1.8em;
+    font-weight: bold;
+    color: #A00000;
+    margin-bottom: 30px;
+    text-shadow: 1px 1px 2px white;
+}
+
+.main-nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.main-nav li a {
+    display: block;
+    padding: 15px 20px;
+    color: #F4F4F4;
+    text-decoration: none;
+    font-size: 1.1em;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.main-nav li a:hover,
+.main-nav li a.active {
+    background-color: #A00000;
+    color: #FFFFFF;
+}
+
+/* ======================================= */
+/* Estilos del Área de Contenido Principal (Versión Final) */
+/* ======================================= */
+.content-area {
+    flex-grow: 1; /* Permite que el área de contenido ocupe todo el espacio restante */
+    display: flex; /* Habilita Flexbox para los elementos internos */
+    flex-direction: column; /* Apila el contenido verticalmente */
+    padding: 30px; /* Aquí estaba el error, asegúrate de que esté correcto */
+}
+
+.content-header {
+    margin-bottom: 40px;
+    border-bottom: 2px solid #A00000;
+    padding-bottom: 20px;
+}
+
+.content-header h1 {
+    font-size: 2.2em;
+    margin: 0;
+}
+
+.content-header p {
+    color: #F4F4F4;
+    margin: 5px 0 0;
+}
+
+/* ======================================= */
+/* Estilos para las Tarjetas de Categoría (Alineación corregida) */
+/* ======================================= */
+.category-cards {
+    display: flex;
+    justify-content: flex-start; /* Alinea las tarjetas a la izquierda */
+    flex-wrap: wrap;
+    gap: 30px;
+    margin-top: 20px;
+    flex-grow: 1;
+}
+
+.category-card {
+    background-color: #1a1a1a;
+    border-radius: 12px;
+    padding: 20px;
+    text-align: center;
+    text-decoration: none;
+    color: #fff;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    flex-basis: 280px;
+}
+
+.category-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.6);
+}
+
+/* ======================================= */
+/* Estilos para los Videos */
+/* ======================================= */
+.video-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 30px;
+    margin-top: 20px;
+    flex-grow: 1;
+}
+
+.video-item {
+    background-color: #1a1a1a;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+}
+
+.video-item:hover {
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.6);
+}
+
+.video-player {
+    position: relative;
+    padding-bottom: 56.25%; /* Relación de aspecto 16:9 */
+    padding-top: 0;
+    height: 0;
+    overflow: hidden;
+}
+
+.video-player iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+.video-details {
+    padding: 20px;
+    text-align: center;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.video-details h3 {
+    font-size: 1.4em;
+    color: #A00000;
+    margin-bottom: 10px;
+    text-shadow: 1px 1px 2px #000;
+}
+
+.video-details p {
+    font-size: 0.95em;
+    color: #cccccc;
+    line-height: 1.5;
+    margin-top: 0;
+}
+
+.video-container {
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+/* ======================================= */
+/* Estilos para Redes Sociales */
+/* ======================================= */
+.social-media {
+    text-align: center;
+    margin-top: 50px;
+    padding: 20px;
+    background-color: #000000;
+    color: white;
+}
+
+.social-media h3 {
+    font-size: 1.2em;
+    margin-bottom: 15px;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.social-icons img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    transition: transform 0.3s ease;
+}
+
+.social-icons a {
+    text-decoration: none;
+}
+
+.social-icons a:hover img {
+    transform: scale(1.1);
+}
+/* ======================================= */
+/* Estilos para la Sección de Contacto */
+/* ======================================= */
+.contact-cards {
+    display: flex;
+    justify-content: center; /* Centra las tarjetas horizontalmente */
+    flex-wrap: wrap;
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.contact-card {
+    background-color: #1a1a1a;
+    border-radius: 12px;
+    padding: 30px;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    flex: 1 1 300px; /* Hace que las tarjetas sean flexibles y se ajusten */
+}
+
+.contact-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.6);
+}
+
+.contact-card h3 {
+    font-size: 1.8em;
+    color: #A00000;
+    margin-top: 0;
+}
+
+.contact-card p {
+    font-size: 1em;
+    color: #f0f0f0;
+    line-height: 1.6;
+}
+
+.button {
+    display: inline-block;
+    background-color: #A00000;
+    color: #FFFFFF;
+    padding: 12px 25px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    margin-top: 20px;
+    transition: background-color 0.3s;
+}
+
+.button:hover {
+    background-color: #7a0000;
+}
+
+/* ======================================= */
+/* Estilos para Mensajes de Alerta */
+/* ======================================= */
+.message-container {
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 800px;
+}
+
+.alert {
+    padding: 15px;
+    border-radius: 8px;
+    font-size: 1.1em;
+    font-weight: bold;
+    color: #fff;
+    text-align: center;
+    
+    transition: opacity 1s ease-in-out;
+}
+
+.alert-success {
+    background-color: #28a745; /* Verde para éxito */
+    border: 1px solid #1c7430;
+}
+
+.alert-error {
+    background-color: #dc3545; /* Rojo para error */
+    border: 1px solid #a71d2a;
+}
