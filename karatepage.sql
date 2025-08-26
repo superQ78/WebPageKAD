@@ -1,3 +1,4 @@
+CREATE SCHEMA `karatepage` ;
 CREATE TABLE Usuarios (
 id INT PRIMARY KEY auto_increment,
 nombre varchar(100),
